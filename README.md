@@ -39,7 +39,7 @@
 | Frontend | HTML + CSS Native + JavaScript Vanilla |
 | Backend | PHP 8.1+ (Native, tanpa framework) |
 | Database | MySQL 8.0+ |
-| Local Dev | XAMPP / Laragon |
+| Local Dev | XAMPP |
 | Charts | Chart.js v4 (CDN) |
 | Calendar | FullCalendar v6 (CDN) |
 | File Storage | Local + Google Drive API (Service Account) |
