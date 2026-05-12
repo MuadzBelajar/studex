@@ -1,0 +1,235 @@
+
+
+[06-May-2026 14:03:38 Asia/Makassar] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 32768 bytes) in C:\xampp\htdocs\studex - Copy\view\layouts\main.php on line 325
+[07-May-2026 13:41:48 Asia/Makassar] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 32768 bytes) in C:\xampp\htdocs\studexcopy\view\layouts\main.php on line 325
+[07-May-2026 13:54:23 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:54:27 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:54:27 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:54:27 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:54:28 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:54:28 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:54:28 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:54:28 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:54:28 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:54:28 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:54:29 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:54:29 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:54:41 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:54:48 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 13:55:45 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:52
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(52): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 52
+[07-May-2026 14:02:15 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:51
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(51): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 51
+[07-May-2026 14:02:16 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:51
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(51): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 51
+[07-May-2026 14:03:31 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:51
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(51): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 51
+[07-May-2026 14:03:35 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:51
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(51): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 51
+[07-May-2026 14:03:36 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:51
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(51): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 51
+[07-May-2026 14:03:36 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:51
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(51): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 51
+[07-May-2026 14:03:36 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:51
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(51): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 51
+[07-May-2026 14:03:38 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:51
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(51): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 51
+[07-May-2026 14:03:38 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:51
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(51): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 51
+[08-May-2026 09:51:04 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:51
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(51): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 51
+[08-May-2026 09:51:04 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:51
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(51): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 51
+[08-May-2026 09:51:13 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    SELECT r.id, r.tanggal,\
+           SUM(CASE WHEN p.status='hadir' TH...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:51
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(51): PDO->query('\\\r\n    SELECT r...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 51
+[10-May-2026 21:28:17 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    (\
+        SELECT 'Rabuan' AS modul, judul AS judul, tanggal AS tangg...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:75
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(75): PDO->query('\\\r\n    (\\\r\n    ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 75
+[10-May-2026 21:28:43 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    (\
+        SELECT 'Rabuan' AS modul, judul AS judul, tanggal AS tangg...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:75
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(75): PDO->query('\\\r\n    (\\\r\n    ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 75
+[10-May-2026 21:28:44 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    (\
+        SELECT 'Rabuan' AS modul, judul AS judul, tanggal AS tangg...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:75
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(75): PDO->query('\\\r\n    (\\\r\n    ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 75
+[10-May-2026 21:28:44 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    (\
+        SELECT 'Rabuan' AS modul, judul AS judul, tanggal AS tangg...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:75
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(75): PDO->query('\\\r\n    (\\\r\n    ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 75
+[10-May-2026 21:28:44 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    (\
+        SELECT 'Rabuan' AS modul, judul AS judul, tanggal AS tangg...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:75
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(75): PDO->query('\\\r\n    (\\\r\n    ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 75
+[10-May-2026 21:28:44 Asia/Makassar] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\
+    (\
+        SELECT 'Rabuan' AS modul, judul AS judul, tanggal AS tangg...' at line 1 in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php:75
+Stack trace:
+#0 C:\xampp\htdocs\studexcopy\modules\dashboard\index.php(75): PDO->query('\\\r\n    (\\\r\n    ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\studexcopy\modules\dashboard\index.php on line 75
