@@ -1,0 +1,505 @@
+/* ============================================================
+   STUDEX — Student Index
+   assets/css/responsive.css — Responsive Overrides
+   Breakpoints:
+     xl   : 1440px
+     lg   : 1280px
+     md   : 1024px
+     sm   : 768px
+     xs   : 480px
+     xxs  : 360px
+   ============================================================ */
+
+/* ============================================================
+   XL — 1440px ke bawah
+   ============================================================ */
+
+@media (max-width: 1440px) {
+    .main-content {
+        padding: var(--space-6);
+    }
+}
+
+/* ============================================================
+   LG — 1280px ke bawah
+   ============================================================ */
+
+@media (max-width: 1280px) {
+    /* Grid */
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .grid-5 { grid-template-columns: repeat(3, 1fr); }
+    .grid-6 { grid-template-columns: repeat(3, 1fr); }
+
+    /* Dashboard stat cards */
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Chart grid */
+    .charts-grid-main {
+        grid-template-columns: 1fr;
+    }
+
+    /* Kolom 2/3 */
+    .grid-2-1 { grid-template-columns: 1fr; }
+    .grid-3-2 { grid-template-columns: 1fr; }
+    .grid-1-2 { grid-template-columns: 1fr; }
+    .grid-2-3 { grid-template-columns: 1fr; }
+
+    /* Table wrapper */
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    /* Topbar search */
+    .search-bar {
+        min-width: 220px;
+    }
+}
+
+/* ============================================================
+   MD — 1024px ke bawah
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    /* Layout */
+    .main-content {
+        padding: var(--space-5) var(--space-6);
+    }
+
+    .topbar {
+        padding: 0 var(--space-6);
+    }
+
+    /* Grid */
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+
+    /* Form row */
+    .form-row-3 { grid-template-columns: repeat(2, 1fr); }
+
+    /* Card padding */
+    .card-lg { padding: var(--space-6); }
+
+    /* Modal drawer width */
+    .modal-drawer { width: 420px; }
+
+    /* Stat card value */
+    .stat-card-value { font-size: 1.75rem; }
+
+    /* Page header wrap */
+    .page-header {
+        flex-wrap: wrap;
+        gap: var(--space-3);
+    }
+
+    /* Radar chart */
+    .radar-chart-canvas { max-width: 300px; }
+
+    /* Tabs scroll */
+    .tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+
+    /* Donut chart */
+    .donut-chart-wrapper { gap: var(--space-4); }
+}
+
+/* ============================================================
+   SM — 768px ke bawah (Mobile)
+   ============================================================ */
+
+@media (max-width: 768px) {
+    /* ---- Layout ---- */
+    :root {
+        --topbar-height: 60px;
+    }
+
+    .main-area {
+        margin-left: 0 !important;
+    }
+
+    .topbar {
+        left: 0 !important;
+        padding: 0 var(--space-4);
+        height: var(--topbar-height);
+    }
+
+    .main-content {
+        padding: var(--space-4);
+    }
+
+    /* Sidebar closed by default on mobile */
+    .sidebar {
+        transform: translateX(-100%);
+        width: var(--sidebar-width-full) !important;
+        box-shadow: var(--shadow-lg);
+    }
+
+    .sidebar.mobile-open {
+        transform: translateX(0);
+    }
+
+    /* ---- Grid ---- */
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5,
+    .grid-6 {
+        grid-template-columns: 1fr;
+    }
+
+    .col-span-2,
+    .col-span-3 {
+        grid-column: span 1;
+    }
+
+    /* ---- Dashboard ---- */
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-3);
+    }
+
+    .stat-card {
+        padding: var(--space-4);
+    }
+
+    .stat-card-value { font-size: 1.5rem; }
+
+    /* ---- Page Header ---- */
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: var(--space-4);
+    }
+
+    .page-header-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .page-title { font-size: var(--text-md); }
+
+    /* ---- Topbar ---- */
+    .search-bar       { display: none; }
+    .topbar-menu-btn  { display: flex; }
+
+    /* ---- Cards ---- */
+    .card    { padding: var(--space-4); }
+    .card-lg { padding: var(--space-4); }
+
+    /* ---- Tabs ---- */
+    .tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 0;
+    }
+
+    .tab-item { padding: var(--space-3) var(--space-4); }
+
+    /* ---- Tables ---- */
+    /* Hide kolom tidak penting di mobile */
+    .table .hide-mobile { display: none; }
+
+    /* Card table style di mobile */
+    .table-mobile-card thead { display: none; }
+
+    .table-mobile-card tbody tr {
+        display: block;
+        padding: var(--space-4);
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius-md);
+        margin-bottom: var(--space-3);
+        background-color: var(--bg-card);
+    }
+
+    .table-mobile-card tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--space-2) 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .table-mobile-card tbody td:last-child {
+        border-bottom: none;
+    }
+
+    .table-mobile-card tbody td::before {
+        content: attr(data-label);
+        font-size: var(--text-xs);
+        font-weight: var(--fw-semibold);
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    /* ---- Forms ---- */
+    .form-row   { grid-template-columns: 1fr; }
+    .form-row-3 { grid-template-columns: 1fr; }
+
+    /* ---- Modals ---- */
+    .modal-overlay {
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .modal {
+        border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+        max-width: 100%;
+        max-height: 92vh;
+        transform: translateY(100%);
+    }
+
+    .modal-overlay.open .modal {
+        transform: translateY(0);
+    }
+
+    .modal-drawer {
+        width: 100%;
+        border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+        height: 90vh;
+        top: auto;
+        bottom: 0;
+        right: 0;
+        transform: translateY(100%);
+    }
+
+    .modal-overlay.open .modal-drawer {
+        transform: translateY(0);
+    }
+
+    .modal-header { padding: var(--space-5) var(--space-4) var(--space-3); }
+    .modal-body   { padding: 0 var(--space-4) var(--space-4); }
+    .modal-footer { padding: var(--space-3) var(--space-4) var(--space-5); }
+
+    /* ---- Phase Stepper ---- */
+    .phase-step-label { font-size: 10px; }
+
+    .phase-step-circle {
+        width: 32px;
+        height: 32px;
+        font-size: var(--text-xs);
+    }
+
+    /* ---- Charts ---- */
+    .chart-h-md { height: 200px; }
+    .chart-h-lg { height: 240px; }
+    .chart-h-xl { height: 280px; }
+
+    .chart-card { padding: var(--space-4); }
+
+    .donut-chart-wrapper { flex-direction: column; align-items: center; }
+    .donut-legend { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+
+    .radar-chart-canvas { max-width: 240px; }
+
+    /* ---- Buttons ---- */
+    .btn-block-mobile {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* ---- Breadcrumb ---- */
+    .breadcrumb { display: none; }
+
+    /* ---- Pagination ---- */
+    .pagination-info { display: none; }
+
+    /* ---- Upload Zone ---- */
+    .upload-zone {
+        padding: var(--space-8) var(--space-4);
+    }
+
+    /* ---- Attendance summary ---- */
+    .attendance-summary { gap: var(--space-2); }
+    .attendance-stat { padding: var(--space-2); }
+    .attendance-stat-value { font-size: var(--text-base); }
+
+    /* ---- Score comparison ---- */
+    .score-item-name {
+        min-width: 72px;
+        font-size: var(--text-xs);
+    }
+
+    /* ---- Toast ---- */
+    .toast-container {
+        left: var(--space-4);
+        right: var(--space-4);
+        bottom: var(--space-4);
+    }
+
+    .toast { min-width: unset; max-width: 100%; }
+}
+
+/* ============================================================
+   XS — 480px ke bawah
+   ============================================================ */
+
+@media (max-width: 480px) {
+    /* Dashboard stat cards jadi 1 kolom */
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    /* Page title lebih kecil */
+    .page-title { font-size: var(--text-base); }
+
+    /* Card padding */
+    .card { padding: var(--space-3); }
+
+    /* Stat card */
+    .stat-card-value { font-size: 1.25rem; }
+
+    /* Buttons kecil */
+    .btn { font-size: var(--text-xs); padding: var(--space-2) var(--space-3); }
+    .btn-lg { font-size: var(--text-sm); padding: var(--space-2) var(--space-5); }
+
+    /* Avatar group */
+    .avatar-group .avatar { margin-left: -6px; }
+
+    /* Table actions jadi vertikal */
+    .table-actions {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    /* Form group gap */
+    .auth-form { gap: var(--space-4); }
+
+    /* Modal */
+    .modal-header { padding: var(--space-4) var(--space-3) var(--space-2); }
+    .modal-body   { padding: 0 var(--space-3) var(--space-3); }
+    .modal-footer { padding: var(--space-3); gap: var(--space-2); }
+    .modal-footer .btn { flex: 1; }
+
+    /* Phase stepper label sembunyikan di layar sangat kecil */
+    .phase-step-label { display: none; }
+
+    /* Chart */
+    .chart-h-sm { height: 140px; }
+    .chart-h-md { height: 180px; }
+}
+
+/* ============================================================
+   XXS — 360px ke bawah
+   ============================================================ */
+
+@media (max-width: 360px) {
+    .main-content { padding: var(--space-3); }
+
+    .topbar { padding: 0 var(--space-3); }
+
+    .card { padding: var(--space-3); }
+
+    .stat-card { padding: var(--space-3); }
+    .stat-card-value { font-size: 1.1rem; }
+
+    /* Form */
+    .auth-form .form-control { padding: var(--space-2) var(--space-3); }
+    .auth-submit-btn { padding: var(--space-2) var(--space-4); font-size: var(--text-sm); }
+}
+
+/* ============================================================
+   PRINT
+   ============================================================ */
+
+@media print {
+    .sidebar,
+    .topbar,
+    .page-header-actions,
+    .btn,
+    .modal-overlay,
+    .toast-container,
+    .breadcrumb,
+    .pagination,
+    .tabs,
+    .search-bar,
+    .topbar-btn,
+    .card-more,
+    .table-actions {
+        display: none !important;
+    }
+
+    .main-area {
+        margin-left: 0 !important;
+    }
+
+    .main-content {
+        margin-top: 0 !important;
+        padding: 0 !important;
+    }
+
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        break-inside: avoid;
+    }
+
+    .table tbody tr:hover {
+        background-color: transparent !important;
+    }
+
+    h1, h2, h3, h4 {
+        break-after: avoid;
+    }
+
+    .chart-card {
+        break-inside: avoid;
+    }
+
+    /* Print header */
+    .print-header {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid #333;
+    }
+
+    .print-header .print-logo {
+        font-size: 20px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .print-header .print-date {
+        font-size: 12px;
+        color: #666;
+    }
+}
+
+/* Default: sembunyikan print header di layar */
+.print-header { display: none; }
+
+/* ============================================================
+   UTILITY RESPONSIVE HELPERS
+   ============================================================ */
+
+/* Tampilkan/sembunyikan per breakpoint */
+.show-mobile  { display: none !important; }
+.hide-mobile  { display: initial !important; }
+
+@media (max-width: 768px) {
+    .show-mobile  { display: initial !important; }
+    .hide-mobile  { display: none !important; }
+    .show-mobile-flex { display: flex !important; }
+}
+
+.show-desktop { display: initial !important; }
+.hide-desktop { display: none !important; }
+
+@media (min-width: 769px) {
+    .show-desktop { display: initial !important; }
+    .hide-desktop { display: none !important; }
+}
+
+/* Text alignment responsive */
+@media (max-width: 768px) {
+    .text-center-mobile { text-align: center !important; }
+    .text-left-mobile   { text-align: left !important; }
+}

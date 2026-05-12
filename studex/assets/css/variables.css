@@ -1,0 +1,155 @@
+/* ============================================================
+   STUDEX — Student Index
+   assets/css/variables.css — Design Tokens (CSS Custom Properties)
+   Based on: Paperpillar Design System
+   ============================================================ */
+
+:root {
+    /* --- Base Colors --- */
+    --color-black-300:      #121212;
+    --color-black-200:      #201F23;
+    --color-grey-300:       #45515C;
+    --color-grey-200:       #596200;
+    --color-white:          #FFFFFF;
+
+    /* --- Green Palette --- */
+    --color-army:           #395917;
+    --color-green-dark-300: #4C8C6A;
+    --color-green-dark-200: #617C6C;
+    --color-green-soft-200: #A4C8AE;
+    --color-green-soft-000: #E6EFEA;
+
+    /* --- Purple Palette --- */
+    --color-purple-300:     #595D75;
+    --color-purple-200:     #8B8E05;
+    --color-purple-100:     #E3E4EA;
+
+    /* --- Beige Palette --- */
+    --color-beige-300:      #430170;
+    --color-beige-200:      #E5D6B9;
+
+    /* --- Tosca --- */
+    --color-tosca:          #C1D8DA;
+
+    /* --- Red --- */
+    --color-red:            #8B1408;
+
+    /* ============================================================
+       SEMANTIC TOKENS — Dipetakan dari palette di atas
+       ============================================================ */
+
+    /* Primary — Army Green */
+    --primary:              var(--color-army);
+    --primary-hover:        #2d4712;
+    --primary-light:        var(--color-green-soft-000);
+    --primary-mid:          var(--color-green-soft-200);
+    --primary-text:         var(--color-white);
+
+    /* Secondary — Dark Green */
+    --secondary:            var(--color-green-dark-300);
+    --secondary-hover:      var(--color-green-dark-200);
+    --secondary-light:      #d4e8dc;
+
+    /* Neutral */
+    --neutral-900:          var(--color-black-300);
+    --neutral-700:          var(--color-black-200);
+    --neutral-500:          var(--color-grey-300);
+    --neutral-300:          #8a9199;
+    --neutral-200:          #c8cdd2;
+    --neutral-100:          #eaecee;
+    --neutral-050:          #f5f6f7;
+
+    /* Background */
+    --bg-app:               #edecea;   /* latar utama aplikasi (cream/warm grey) */
+    --bg-sidebar:           var(--color-black-300);
+    --bg-card:              var(--color-white);
+    --bg-input:             var(--color-white);
+    --bg-hover:             var(--color-green-soft-000);
+
+    /* Text */
+    --text-primary:         var(--color-black-300);
+    --text-secondary:       var(--color-grey-300);
+    --text-muted:           var(--neutral-300);
+    --text-on-dark:         var(--color-white);
+    --text-on-primary:      var(--color-white);
+
+    /* Border */
+    --border-color:         #e0e3e6;
+    --border-radius-sm:     8px;
+    --border-radius-md:     12px;
+    --border-radius-lg:     16px;
+    --border-radius-xl:     24px;
+    --border-radius-full:   999px;
+
+    /* Status Colors */
+    --color-success:        #2d7a4f;
+    --color-success-light:  #e8f5ee;
+    --color-warning:        #c97c10;
+    --color-warning-light:  #fff4e0;
+    --color-danger:         var(--color-red);
+    --color-danger-light:   #fce8e6;
+    --color-info:           var(--color-tosca);
+    --color-info-light:     #eaf4f5;
+
+    /* Shadow */
+    --shadow-sm:    0 1px 3px rgba(18,18,18,0.06), 0 1px 2px rgba(18,18,18,0.04);
+    --shadow-md:    0 4px 12px rgba(18,18,18,0.08), 0 2px 4px rgba(18,18,18,0.04);
+    --shadow-lg:    0 8px 24px rgba(18,18,18,0.10), 0 4px 8px rgba(18,18,18,0.05);
+    --shadow-card:  0 2px 8px rgba(18,18,18,0.06);
+
+    /* Typography */
+    --font-heading:     'General Sans', 'Plus Jakarta Sans', sans-serif;
+    --font-body:        'General Sans', 'Inter', sans-serif;
+    --font-mono:        'JetBrains Mono', 'Fira Code', monospace;
+
+    --text-xs:    12px;
+    --text-sm:    14px;
+    --text-base:  16px;
+    --text-md:    20px;
+    --text-lg:    24px;
+    --text-xl:    32px;
+    --text-2xl:   36px;
+
+    --fw-regular:   400;
+    --fw-medium:    500;
+    --fw-semibold:  600;
+    --fw-bold:      700;
+
+    --lh-tight:   1.2;
+    --lh-normal:  1.4;
+    --lh-relaxed: 1.6;
+    --lh-loose:   1.8;
+
+    /* Layout */
+    --sidebar-width:        72px;
+    --sidebar-width-full:   240px;
+    --topbar-height:        72px;
+    --content-max-width:    1440px;
+
+    /* Spacing scale */
+    --space-1:  4px;
+    --space-2:  8px;
+    --space-3:  12px;
+    --space-4:  16px;
+    --space-5:  20px;
+    --space-6:  24px;
+    --space-8:  32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+
+    /* Transitions */
+    --transition-fast:   150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow:   400ms ease;
+
+    /* Z-index */
+    --z-dropdown:  100;
+    --z-modal:     200;
+    --z-toast:     300;
+    --z-sidebar:   50;
+    --z-topbar:    40;
+}
+
+/* Dark mode override (opsional, bisa diaktifkan nanti) */
+/* @media (prefers-color-scheme: dark) { ... } */
