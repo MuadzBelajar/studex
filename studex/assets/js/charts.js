@@ -309,7 +309,8 @@
                 { label: 'Hadir', data: opts.hadir || [], backgroundColor: COLORS.success, borderRadius: 6, borderSkipped: false },
                 { label: 'Izin',  data: opts.izin  || [], backgroundColor: COLORS.tosca,   borderRadius: 6, borderSkipped: false },
                 { label: 'Sakit', data: opts.sakit || [], backgroundColor: COLORS.warning,  borderRadius: 6, borderSkipped: false },
-                { label: 'Alpha', data: opts.alpha || [], backgroundColor: COLORS.red,      borderRadius: 6, borderSkipped: false },
+                // FIX: Alpha harus light pink/rose (konsisten dengan legend atas)
+                { label: 'Alpha', data: opts.alpha || [], backgroundColor: '#F9E8E7',      borderRadius: 6, borderSkipped: false },
             ],
             suffix: ' siswa',
         });

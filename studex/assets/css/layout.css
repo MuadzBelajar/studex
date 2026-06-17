@@ -456,9 +456,11 @@
     margin-top: var(--topbar-height);
     padding: var(--space-6) var(--space-8);
     flex: 1;
-    max-width: var(--content-max-width);
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
+
 
 /* ============================================================
    PAGE HEADER
@@ -671,6 +673,23 @@
     opacity: 0;
     transition: opacity var(--transition-normal);
 }
+
+/* ============================================================
+   RESPONSIVE SAFETY (tables & content in flex)
+   ============================================================ */
+.table-responsive,
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    min-width: 0;
+}
+
+.card,
+.stat-card {
+    max-width: 100%;
+}
+
 
 .sidebar-overlay.visible {
     opacity: 1;

@@ -117,6 +117,26 @@
         --topbar-height: 60px;
     }
 
+    /* Responsive safety: cards & tables */
+    .card,
+    .stat-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .table-responsive,
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table.table {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+
     .main-area {
         margin-left: 0 !important;
     }
