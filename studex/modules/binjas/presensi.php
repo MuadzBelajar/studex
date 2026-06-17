@@ -77,7 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Siswa dari angkatan sesi
 $siswaList = $db->prepare("
-    SELECT s.id, s.nama, s.nomor_induk
+    SELECT s.id, s.nama, s.nis
+
     FROM siswa s
     WHERE s.angkatan_id = ? AND s.status = 'aktif'
     ORDER BY s.nama
@@ -245,7 +246,8 @@ ob_start();
                                     <td>
                                         <div style="font-weight:600;font-size:13px;"><?= e($siswa['nama']) ?></div>
                                     </td>
-                                    <td style="font-size:12px;color:var(--grey);"><?= e($siswa['nomor_induk']) ?></td>
+                                    <td style="font-size:12px;color:var(--grey);"><?= e($siswa['nis']) ?></td>
+
                                     <td>
                                         <div class="presensi-radio">
                                             <?php foreach (['hadir' => 'Hadir', 'izin' => 'Izin', 'sakit' => 'Sakit', 'alpha' => 'Alpha'] as $val => $label): ?>

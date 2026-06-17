@@ -1,4 +1,4 @@
-<?php
+i<?php
 define('STUDEX', true);
 require_once __DIR__ . '/../../config/app.php';
 require_once __DIR__ . '/../../config/database.php';
@@ -41,7 +41,8 @@ if (empty($items)) {
 
 // Siswa dari angkatan sesi
 $siswaList = $db->prepare("
-    SELECT s.id, s.nama, s.nomor_induk
+    SELECT s.id, s.nama, s.nis
+
     FROM siswa s
     WHERE s.angkatan_id = ? AND s.status = 'aktif'
     ORDER BY s.nama
@@ -197,7 +198,8 @@ ob_start();
                                 <td class="sticky-col"><?= $i + 1 ?></td>
                                 <td class="sticky-col-2">
                                     <div style="font-weight:600;font-size:13px;"><?= e($siswa['nama']) ?></div>
-                                    <div style="font-size:11px;color:var(--grey);"><?= e($siswa['nomor_induk']) ?></div>
+                                    <div style="font-size:11px;color:var(--grey);"><?= e($siswa['nis']) ?></div>
+
                                 </td>
                                 <?php foreach ($items as $item): ?>
                                     <?php

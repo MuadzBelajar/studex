@@ -10,7 +10,7 @@ require_once __DIR__ . '/../../core/Helpers.php';
 requireLogin();
 
 $db           = db();
-$angkatanList = $db->query("SELECT id, nama_angkatan FROM angkatan ORDER BY tahun_masuk DESC")->fetchAll();
+$angkatanList = $db->query("SELECT id, nama FROM angkatan ORDER BY tahun DESC")->fetchAll();
 
 // ── Filter params ──────────────────────────────────────────────
 $modul      = in_array($_GET['modul'] ?? '', ['rabuan','mentoring','binjas'])

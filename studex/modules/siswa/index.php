@@ -59,7 +59,9 @@ $total = (int)$countStmt->fetchColumn();
 // Pagination
 $pag    = paginate($total);
 $offset = $pag['offset'];
-$limit  = $pag['per_page'];
+// tampilkan semua data tanpa pagination (supaya tidak hanya 15 baris)
+$limit  = max($total, 1);
+
 
 // Fetch data
 $stmt = $db->prepare("
@@ -242,7 +244,7 @@ ob_start();
             <table class="table">
                 <thead>
                     <tr>
-                        <th style="width:40px;">#</th>
+                        <th style="width:40px;">No</th>
                         <th>NIS</th>
                         <th>Nama Siswa</th>
                         <th>Angkatan</th>

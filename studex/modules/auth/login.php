@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // ============================================================
 $pageTitle = 'Login';
 $authTitle = "Selamat datang\nkembali!";
-$authDesc  = 'Sistem monitoring aktivitas siswa yang terintegrasi, terstruktur, dan mudah digunakan.';
+$authDesc  = '';
 
 ob_start();
 ?>
@@ -65,6 +65,9 @@ ob_start();
     <h2 class="auth-greeting-title">Masuk ke STUDEX</h2>
     <p class="auth-greeting-sub">Gunakan kredensial yang diberikan oleh Super Admin.</p>
 </div>
+
+<!-- Card content wrapper (supaya spacing & layout rapih) -->
+<div class="auth-card-body">
 
 <!-- Error alert -->
 <?php if ($error): ?>
@@ -171,6 +174,8 @@ ob_start();
 <div class="auth-footer-text">
     STUDEX &copy; <?= date('Y') ?> — Hanya untuk pengguna yang berwenang.
 </div>
+</div>
+
 
 <script>
 // Loading state saat submit
@@ -185,3 +190,4 @@ document.getElementById('loginForm').addEventListener('submit', function () {
 $content = ob_get_clean();
 include ROOT_PATH . '/view/layouts/auth.php';
 ?>
+

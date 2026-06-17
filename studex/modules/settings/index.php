@@ -1,4 +1,47 @@
 <?php
+// ===================================================================
+// Fallback: define flash() if missing (fix "undefined function flash()")
+// Place at VERY TOP of modules/settings/index.php
+// ===================================================================
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (!function_exists('flash')) {
+    function flash(): void {
+        // Ambil flash dari session (mengacu struktur di config/session.php)
+        // Jika getFlash() sudah ada, pakai. Kalau tidak, fallback manual.
+        if (function_exists('getFlash')) {
+            $flash = getFlash();
+        } else {
+            $flash = $_SESSION['flash'] ?? null;
+            unset($_SESSION['flash']);
+        }
+
+        if (empty($flash)) return;
+
+        $type    = $flash['type'] ?? 'info';
+        $message = $flash['message'] ?? '';
+
+        $map = [
+            'success' => 'alert-success',
+            'error'   => 'alert-danger',
+            'warning' => 'alert-warning',
+            'info'    => 'alert-info',
+        ];
+
+        $cls = $map[$type] ?? 'alert-info';
+
+        // Gunakan htmlspecialchars langsung agar aman walau helpers belum loaded
+        $safeMsg = htmlspecialchars((string)$message, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+
+        echo '<div class="alert ' . $cls . ' fade-in mb-5" role="alert" id="flashMessage">';
+        echo '<span>' . $safeMsg . '</span>';
+        echo '</div>';
+    }
+}
+
 define('STUDEX', true);
 require_once __DIR__ . '/../../config/app.php';
 require_once __DIR__ . '/../../config/database.php';
@@ -12,21 +55,24 @@ requireSuperAdmin();
 $db = db();
 
 // ── Ambil semua settings ───────────────────────────────────────
-$stmtAll  = $db->query("SELECT setting_key, setting_value, setting_label, setting_type, setting_group
-                         FROM settings ORDER BY setting_group, id ASC");
+$stmtAll  = $db->query("SELECT kunci, nilai, label, tipe, deskripsi
+                         FROM settings ORDER BY id ASC");
 $rawSettings = $stmtAll->fetchAll();
+
 
 // Kelompokkan per group
 $settingGroups = [];
 foreach ($rawSettings as $row) {
-    $settingGroups[$row['setting_group']][] = $row;
+    // schema.sql v1: settings belum punya kolom group; tampilkan dalam 1 group default
+    $settingGroups['general'][] = $row;
 }
+
 
 // ── Handle POST: simpan settings ──────────────────────────────
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     verifyCsrf();
 
-    $updates = $_POST['settings'] ?? [];
+$updates = $_POST['settings'] ?? [];
     $saved   = 0;
 
     foreach ($updates as $key => $value) {
@@ -34,11 +80,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $value = sanitize($value);
 
         // Cek apakah key ada di DB (keamanan: jangan bisa inject key baru)
-        $cek = $db->prepare("SELECT id FROM settings WHERE setting_key=?");
+        $cek = $db->prepare("SELECT id FROM settings WHERE kunci=?");
         $cek->execute([$key]);
         if (!$cek->fetchColumn()) continue;
 
-        $db->prepare("UPDATE settings SET setting_value=?, updated_at=NOW() WHERE setting_key=?")
+        $db->prepare("UPDATE settings SET nilai=?, updated_at=NOW() WHERE kunci=?")
            ->execute([$value, $key]);
         $saved++;
     }
@@ -104,16 +150,16 @@ ob_start();
             <?php foreach ($items as $item): ?>
             <div class="form-group row mb-3 align-items-center">
                 <label class="col-md-4 col-form-label fw-medium">
-                    <?= e($item['setting_label'] ?: $item['setting_key']) ?>
-                    <?php if ($item['setting_type'] === 'password'): ?>
+<?= e($item['label'] ?: $item['kunci']) ?>
+<?php if ($item['tipe'] === 'password'): ?>
                         <span class="badge badge-warning ms-1" style="font-size:10px">sensitive</span>
                     <?php endif; ?>
                 </label>
                 <div class="col-md-8">
                     <?php
-                    $inputName = 'settings[' . e($item['setting_key']) . ']';
-                    $inputVal  = e($item['setting_value']);
-                    switch ($item['setting_type']):
+$inputName = 'settings[' . e($item['kunci']) . ']';
+                    $inputVal  = e($item['nilai']);
+                    switch ($item['tipe']):
                         case 'boolean': ?>
                             <div class="d-flex align-items-center gap-3">
                                 <label class="toggle-switch">
@@ -121,11 +167,11 @@ ob_start();
                                     <input type="checkbox"
                                            name="<?= $inputName ?>"
                                            value="1"
-                                           <?= $item['setting_value'] == '1' ? 'checked' : '' ?>>
+<?= $item['nilai'] == '1' ? 'checked' : '' ?>
                                     <span class="toggle-slider"></span>
                                 </label>
                                 <span class="text-sm text-secondary">
-                                    <?= $item['setting_value'] == '1' ? 'Aktif' : 'Nonaktif' ?>
+<?= $item['nilai'] == '1' ? 'Aktif' : 'Nonaktif' ?>
                                 </span>
                             </div>
                         <?php break;
@@ -137,13 +183,13 @@ ob_start();
                         case 'password': ?>
                             <div class="input-group">
                                 <input type="password"
-                                       id="pw_<?= e($item['setting_key']) ?>"
+id="pw_<?= e($item['kunci']) ?>"
                                        name="<?= $inputName ?>"
                                        class="form-control"
                                        value="<?= $inputVal ?>"
                                        autocomplete="new-password">
                                 <button type="button" class="btn btn-outline"
-                                        onclick="togglePw('pw_<?= e($item['setting_key']) ?>')">
+onclick="togglePw('pw_<?= e($item['kunci']) ?>')"
                                     👁
                                 </button>
                             </div>

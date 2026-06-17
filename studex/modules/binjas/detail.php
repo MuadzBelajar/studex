@@ -53,7 +53,8 @@ foreach ($standarRows->fetchAll() as $s) {
 // Skor
 $skorRaw = $db->prepare("
     SELECT bs.siswa_id, bs.item_id, bs.nilai,
-           s.nama AS nama_siswa, s.nomor_induk
+           s.nama AS nama_siswa, s.nis
+
     FROM binjas_skor bs
     JOIN siswa s ON s.id = bs.siswa_id
     WHERE bs.sesi_id = ?
@@ -69,7 +70,8 @@ foreach ($skorRaw as $row) {
     if (!isset($siswaMap[$sid])) {
         $siswaMap[$sid] = [
             'nama'        => $row['nama_siswa'],
-            'nomor_induk' => $row['nomor_induk'],
+            'nomor_induk' => $row['nis'],
+
             'skor'        => [],
         ];
     }
@@ -286,6 +288,7 @@ ob_start();
                                 <td><?= $no++ ?></td>
                                 <td><?= e($siswa['nama']) ?></td>
                                 <td><?= e($siswa['nomor_induk']) ?></td>
+
                                 <td>
                                     <?php if ($presStat): ?>
                                         <span class="badge <?= $presCls[$presStat] ?? 'badge-secondary' ?>">
