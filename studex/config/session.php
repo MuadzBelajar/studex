@@ -53,12 +53,14 @@ function isAdmin(): bool {
  */
 function currentUser(): ?array {
     if (!isLoggedIn()) return null;
+
+    // Fallback untuk menghindari session lama (key belum ada)
     return [
         'id'       => $_SESSION['user_id'],
-        'nama'     => $_SESSION['user_nama'],
-        'username' => $_SESSION['user_username'],
-        'email'    => $_SESSION['user_email'],
-        'role'     => $_SESSION['user_role'],
+        'nama'     => $_SESSION['user_nama'] ?? '',
+        'username' => $_SESSION['user_username'] ?? '',
+        'email'    => $_SESSION['user_email'] ?? '',
+        'role'     => $_SESSION['user_role'] ?? '',
         'avatar'   => $_SESSION['user_avatar'] ?? null,
     ];
 }
@@ -67,8 +69,23 @@ function currentUser(): ?array {
  * Guard: wajib login — redirect ke login jika belum
  */
 function requireLogin(): void {
-    if (!isLoggedIn()) {
-        setFlash('warning', 'Silakan login terlebih dahulu.');
+    // Guard minimal: id ada AND data user inti ada
+    $hasCoreUserData = isset($_SESSION['user_nama'], $_SESSION['user_username'], $_SESSION['user_email'], $_SESSION['user_role']);
+
+    if (!isLoggedIn() || !$hasCoreUserData) {
+        // session lama/konsisten-acak: paksa logout
+        $_SESSION = [];
+        if (ini_get('session.use_cookies')) {
+            $params = session_get_cookie_params();
+            setcookie(
+                session_name(), '', time() - 42000,
+                $params['path'], $params['domain'],
+                $params['secure'], $params['httponly']
+            );
+        }
+        session_destroy();
+
+        setFlash('warning', 'Sesi Anda tidak valid. Silakan login ulang.');
         redirect(BASE_URL . '/modules/auth/login.php');
     }
 }
